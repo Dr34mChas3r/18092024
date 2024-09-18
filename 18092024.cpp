@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    for (int number = 1000000000; number <= 2000000000; number++)
+    {
+        bool is_prime = true;
+
+        for (int divider = 2; divider < number; divider++)
+        {
+            if (number % divider == 0)
+            {
+                is_prime = false;
+                break;
+            }
+        }
+
+        if (is_prime)
+        {
+            cout << number << '\n';
+        }
+    }
+}
